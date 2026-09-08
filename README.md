@@ -25,7 +25,7 @@ python scaffold.py
 - [x] **13.** most_confused_pairs
 - [x] **14.** multilabel_targets
 - [x] **15.** multilabel_knn
-- [ ] **16.** final_test_accuracy
+- [x] **16.** final_test_accuracy
 - [ ] **17.** save_and_reload_classifier
 - [ ] **18.** predict_digits
 
