@@ -29,6 +29,20 @@ python scaffold.py
 - [x] **17.** save_and_reload_classifier
 - [x] **18.** predict_digits
 
----
+## Results
 
-Built on Deep-ML.
+```
+MNIST slice: 10,000 train / 2,000 test images, 784 pixels each
+
+5-detector out-of-fold: {'TN': 8872, 'FP': 265, 'FN': 161, 'TP': 702}
+precision 0.726  recall 0.813  F1 0.767   (accuracy would be 0.957, 'never 5' scores 0.914)
+threshold for 90% precision: 69,695 -> precision 0.900, recall 0.596, 571 flagged
+ROC AUC 0.961; catching 90% of fives costs a false-positive rate of 0.101
+
+multiclass scaled SGD: cross-validated accuracy 0.894
+most confused: 7->9 6.4%, 5->8 5.1%, 3->5 4.5%
+multilabel KNN (large? odd?): macro F1 0.911
+
+TEST accuracy 0.871  (cross-validated estimate was 0.894)
+served predictions on 5 raw images: [7, 2, 1, 0, 4] (truth [7, 2, 1, 0, 4])
+```
