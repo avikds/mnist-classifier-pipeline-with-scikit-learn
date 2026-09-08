@@ -129,8 +129,19 @@ def multiclass_pipeline(random_state=42):
         SGDClassifier(random_state=random_state)
     )
 
-# Step 11 - multiclass_cv_accuracy (not yet solved)
-# TODO: implement
+# Step 11 - multiclass_cv_accuracy
+from sklearn.model_selection import cross_val_score
+
+def multiclass_cv_accuracy(model, X, y, cv=3):
+    scores = cross_val_score(
+        model,
+        X,
+        y,
+        cv=cv,
+        scoring="accuracy"
+    )
+
+    return float(scores.mean())
 
 # Step 12 - normalized_confusion (not yet solved)
 # TODO: implement
