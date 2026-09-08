@@ -169,8 +169,13 @@ def most_confused_pairs(cm, k=3):
         for true_class, predicted_class, rate in pairs[:k]
     ]
 
-# Step 14 - multilabel_targets (not yet solved)
-# TODO: implement
+# Step 14 - multilabel_targets
+def multilabel_targets(y):
+    y = np.asarray(y)
+    return np.column_stack([
+        y >= 7,
+        y % 2 == 1
+    ])
 
 # Step 15 - multilabel_knn (not yet solved)
 # TODO: implement
