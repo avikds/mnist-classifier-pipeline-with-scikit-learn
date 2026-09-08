@@ -26,7 +26,7 @@ python scaffold.py
 - [x] **14.** multilabel_targets
 - [x] **15.** multilabel_knn
 - [x] **16.** final_test_accuracy
-- [ ] **17.** save_and_reload_classifier
+- [x] **17.** save_and_reload_classifier
 - [ ] **18.** predict_digits
 
 ---

@@ -196,8 +196,12 @@ def final_test_accuracy(model, X_test, y_test):
     y_pred = model.predict(X_test)
     return float(accuracy_score(y_test, y_pred))
 
-# Step 17 - save_and_reload_classifier (not yet solved)
-# TODO: implement
+# Step 17 - save_and_reload_classifier
+import joblib
+
+def save_and_reload_classifier(model, path):
+    joblib.dump(model, path)
+    return joblib.load(path)
 
 # Step 18 - predict_digits (not yet solved)
 # TODO: implement
