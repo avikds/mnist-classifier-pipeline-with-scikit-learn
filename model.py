@@ -143,8 +143,14 @@ def multiclass_cv_accuracy(model, X, y, cv=3):
 
     return float(scores.mean())
 
-# Step 12 - normalized_confusion (not yet solved)
-# TODO: implement
+# Step 12 - normalized_confusion
+def normalized_confusion(y_true, y_pred):
+    return confusion_matrix(
+        y_true,
+        y_pred,
+        labels=range(10),
+        normalize="true"
+    )
 
 # Step 13 - most_confused_pairs (not yet solved)
 # TODO: implement
