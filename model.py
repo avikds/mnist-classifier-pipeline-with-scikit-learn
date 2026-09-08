@@ -93,8 +93,17 @@ def threshold_for_precision(y_true, scores, target=0.90):
 
     return float(thresholds[idx])
 
-# Step 8 - evaluate_at_threshold (not yet solved)
-# TODO: implement
+# Step 8 - evaluate_at_threshold
+def evaluate_at_threshold(y_true, scores, threshold):
+    predictions = np.asarray(scores) >= threshold
+    precision, recall, f1 = precision_recall_f1(y_true, predictions)
+
+    return {
+        "precision": precision,
+        "recall": recall,
+        "f1": f1,
+        "positives": int(predictions.sum()),
+    }
 
 # Step 9 - roc_auc (not yet solved)
 # TODO: implement
