@@ -15,7 +15,7 @@ python scaffold.py
 - [x] **3.** train_sgd
 - [x] **4.** cross_val_predictions
 - [x] **5.** confusion_counts
-- [ ] **6.** precision_recall_f1
+- [x] **6.** precision_recall_f1
 - [ ] **7.** threshold_for_precision
 - [ ] **8.** evaluate_at_threshold
 - [ ] **9.** roc_auc
