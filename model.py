@@ -119,8 +119,15 @@ def roc_auc(y_true, scores):
         "fpr_at_recall_90": float(fpr[idx]),
     }
 
-# Step 10 - multiclass_pipeline (not yet solved)
-# TODO: implement
+# Step 10 - multiclass_pipeline
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
+
+def multiclass_pipeline(random_state=42):
+    return make_pipeline(
+        StandardScaler(),
+        SGDClassifier(random_state=random_state)
+    )
 
 # Step 11 - multiclass_cv_accuracy (not yet solved)
 # TODO: implement
