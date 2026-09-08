@@ -152,8 +152,22 @@ def normalized_confusion(y_true, y_pred):
         normalize="true"
     )
 
-# Step 13 - most_confused_pairs (not yet solved)
-# TODO: implement
+# Step 13 - most_confused_pairs
+def most_confused_pairs(cm, k=3):
+    cm = np.asarray(cm)
+    pairs = []
+
+    for i in range(10):
+        for j in range(10):
+            if i != j:
+                pairs.append((i, j, float(cm[i, j])))
+
+    pairs.sort(key=lambda x: x[2], reverse=True)
+
+    return [
+        (true_class, predicted_class, round(rate, 3))
+        for true_class, predicted_class, rate in pairs[:k]
+    ]
 
 # Step 14 - multilabel_targets (not yet solved)
 # TODO: implement

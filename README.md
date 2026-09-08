@@ -22,7 +22,7 @@ python scaffold.py
 - [x] **10.** multiclass_pipeline
 - [x] **11.** multiclass_cv_accuracy
 - [x] **12.** normalized_confusion
-- [ ] **13.** most_confused_pairs
+- [x] **13.** most_confused_pairs
 - [ ] **14.** multilabel_targets
 - [ ] **15.** multilabel_knn
 - [ ] **16.** final_test_accuracy
