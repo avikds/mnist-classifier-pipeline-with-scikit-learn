@@ -203,6 +203,10 @@ def save_and_reload_classifier(model, path):
     joblib.dump(model, path)
     return joblib.load(path)
 
-# Step 18 - predict_digits (not yet solved)
-# TODO: implement
+# Step 18 - predict_digits
+def predict_digits(model, images):
+    X = np.asarray(images).reshape(-1, 784).astype(np.float32)
+    predictions = model.predict(X)
+
+    return [int(prediction) for prediction in predictions]
 
