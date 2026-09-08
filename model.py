@@ -48,8 +48,18 @@ def train_sgd(X, y, random_state=42):
     clf.fit(X, y)
     return clf
 
-# Step 4 - cross_val_predictions (not yet solved)
-# TODO: implement
+# Step 4 - cross_val_predictions
+from sklearn.base import clone
+from sklearn.model_selection import cross_val_predict
+
+def cross_val_predictions(clf, X, y, cv=3, method="predict"):
+    return cross_val_predict(
+        clone(clf),
+        X,
+        y,
+        cv=cv,
+        method=method
+    )
 
 # Step 5 - confusion_counts (not yet solved)
 # TODO: implement
